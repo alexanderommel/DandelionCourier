@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Dandelion Courier</string>
+    <string name="app_name_courier">Courier</string>
+    <string name="app_name_title"><font face='roboto_condensed_bold' color="#000000" >D</font>andelion</string>
+    <string name="login_app_name">Dandelion Courier</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="login_description">Utiliza las credenciales de tu cuenta para iniciar sesión</string>
+    <string name="login_google_button">Continuar con Google</string>
+    <string name="login_username_hint">Ingrese su usuario</string>
+    <string name="login_password_hint">Ingrese su contraseña</string>
+    <string name="login_enter">Ingresar</string>
+    <string name="home_searching">Buscando...</string>
+    <string name="home_order_received">¡Has recibido un pedido!</string>
+    <string name="home_title">Solicitudes de envío</string>
+    <string name="toast_login_bad_input">Asegurese de llenar los campos correctamente</string>
+</resources>

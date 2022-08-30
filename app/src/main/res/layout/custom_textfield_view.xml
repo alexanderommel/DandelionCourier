@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/textField_imageView"
+        android:src="@drawable/ic_baseline_person_24"
+        android:tint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textField_inputLayout"
+        app:layout_constraintBottom_toBottomOf="@id/textField_inputLayout"
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField_inputLayout"
+        android:layout_width="match_parent"
+        app:layout_constrainedWidth="true"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        android:hint="Persona"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textField_imageView"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textField_editText"
+            android:layout_width="match_parent"
+            android:paddingTop="32dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
