@@ -3,9 +3,9 @@ package com.tongue.dandelioncourier.ui.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tongue.dandelioncourier.data.DriverRemoteRepository
-import com.tongue.dandelioncourier.data.domain.Driver
+import com.tongue.dandelioncourier.data.domain.RegistrationForm
 import com.tongue.dandelioncourier.ui.states.LoginUiState
-import com.tongue.dandelioncourier.ui.states.PresentationUiState
+import com.tongue.dandelioncourier.ui.states.RegistrationUiState
 import com.tongue.dandelioncourier.utils.AppLog
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -13,31 +13,28 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
-class LoginViewModel: ViewModel()  {
+class RegisterViewModel: ViewModel() {
 
     companion object{
-        const val TAG = "LoginViewModel"
+        const val TAG = "RegisterViewModel"
     }
 
     private val driverRemoteRepository = DriverRemoteRepository()
-    private val _uiState = MutableSharedFlow<LoginUiState>()
-    var uiState : SharedFlow<LoginUiState> = _uiState.asSharedFlow()
+    private val _uiState = MutableSharedFlow<RegistrationUiState>()
+    var uiState : SharedFlow<RegistrationUiState> = _uiState.asSharedFlow()
     private var fetchJob : Job? = null
 
-    fun login(username: String, password: String){
-        AppLog.i(TAG,"Login...")
+    fun register(registrationForm: RegistrationForm) {
+        AppLog.i(TAG, "Register...")
         fetchJob?.cancel()
         fetchJob = viewModelScope.launch {
             try {
-                val driverAuthentication = driverRemoteRepository.login(Driver(username=username))
-                println(driverAuthentication.jwt)
-                driverRemoteRepository.initState(driverAuthentication.jwt)
-                _uiState.emit(LoginUiState.LoginSuccessful(driverAuthentication))
+                val driver = driverRemoteRepository.register(registrationForm)
+                _uiState.emit(RegistrationUiState.SuccessfulRegistration)
             } catch (e: Exception) {
                 AppLog.d(TAG,"$e")
-                _uiState.emit(LoginUiState.WrongCredentials("$e"))
+                _uiState.emit(RegistrationUiState.ErrorFound)
             }
         }
     }
-
 }

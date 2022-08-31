@@ -1,6 +1,7 @@
 package com.tongue.dandelioncourier.ui.fragments
 
 import android.os.Bundle
+import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,11 +57,12 @@ class LoginFragment: Fragment() {
                 viewModel.uiState.collect {
                     when(it){
                         is LoginUiState.LoginSuccessful -> {
-                            activityViewModel.authentication = Authentication(it.jwt,"Alexander","Alexander")
+                            activityViewModel.authentication = Authentication(it.driverAuthentication.jwt,
+                                it.driverAuthentication.driver.username,it.driverAuthentication.driver.firstname)
                             findNavController().navigate(R.id.homeFragment)
                         }
                         is LoginUiState.WrongCredentials -> {
-                            Toast.makeText(requireContext(),it.message,Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireContext(),getString(R.string.toast_login_bad_credentials),Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
@@ -76,11 +78,16 @@ class LoginFragment: Fragment() {
             else
                 viewModel.login(binding.textFieldUsername.getText(),binding.textFieldPassword.getText())
         }
+        binding.buttonRegister.setOnClickListener {
+            findNavController().navigate(R.id.registerFragment)
+        }
     }
 
     private fun setUpDefaultValues(){
         binding.textFieldUsername.setUpResources(R.drawable.ic_baseline_person_24,R.string.login_username_hint)
-        binding.textFieldPassword.setUpResources(R.drawable.ic_baseline_lock_24,R.string.login_password_hint)
+        binding.textFieldPassword.setUpResources(R.drawable.ic_baseline_lock_24,R.string.login_password_hint,
+            InputType.TYPE_TEXT_VARIATION_WEB_PASSWORD)
+        binding.textFieldPassword.setUpAsPasswordInput()
         binding.textFieldUsername.setValidationRoutine(ValidationRoutines.validateNotEmptyString)
         binding.textFieldPassword.setValidationRoutine(ValidationRoutines.passwordValidator)
 

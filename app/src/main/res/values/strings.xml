@@ -6,11 +6,24 @@
     <string name="login">Iniciar Sesión</string>
     <string name="login_description">Utiliza las credenciales de tu cuenta para iniciar sesión</string>
     <string name="login_google_button">Continuar con Google</string>
-    <string name="login_username_hint">Ingrese su usuario</string>
+    <string name="login_username_hint">Ingrese su correo electrónico</string>
     <string name="login_password_hint">Ingrese su contraseña</string>
     <string name="login_enter">Ingresar</string>
+    <string name="login_register">Registrese para obtener una cuenta</string>
     <string name="home_searching">Buscando...</string>
     <string name="home_order_received">¡Has recibido un pedido!</string>
     <string name="home_title">Solicitudes de envío</string>
     <string name="toast_login_bad_input">Asegurese de llenar los campos correctamente</string>
+    <string name="register_title">Registro</string>
+    <string name="register_continue">Crear cuenta</string>
+    <string name="register_description">Llene la información solicitada para crear su cuenta de mensajero en Dandelion</string>
+    <string name="register_username">Correo electrónico</string>
+    <string name="register_firstname">Nombre</string>
+    <string name="register_lastname">Apellido</string>
+    <string name="register_car">Marca del vehículo</string>
+    <string name="register_brand">Matrícula</string>
+    <string name="register_password">Contraseña</string>
+    <string name="register_successful">Registro exitoso</string>
+    <string name="register_error">No se pudo registrar</string>
+    <string name="toast_login_bad_credentials">Credenciales incorrectas</string>
 </resources>
