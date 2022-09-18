@@ -1,8 +1,8 @@
 package com.tongue.dandelioncourier.data.network
 
-import com.tongue.dandelioncourier.data.domain.Driver
-import com.tongue.dandelioncourier.data.domain.DriverAuthentication
-import com.tongue.dandelioncourier.data.domain.RegistrationForm
+import com.tongue.dandelioncourier.data.model.Driver
+import com.tongue.dandelioncourier.data.model.DriverAuthentication
+import com.tongue.dandelioncourier.data.model.RegistrationForm
 import retrofit2.http.Body
 import retrofit2.http.Header
 import retrofit2.http.Headers

@@ -2,7 +2,7 @@ package com.tongue.dandelioncourier.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.tongue.dandelioncourier.data.domain.Authentication
+import com.tongue.dandelioncourier.data.model.Authentication
 import com.tongue.dandelioncourier.ui.states.PresentationUiState
 import com.tongue.dandelioncourier.utils.AppLog
 import kotlinx.coroutines.Job

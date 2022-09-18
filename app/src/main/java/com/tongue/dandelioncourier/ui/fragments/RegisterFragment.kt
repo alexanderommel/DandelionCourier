@@ -13,11 +13,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.tongue.dandelioncourier.R
-import com.tongue.dandelioncourier.data.domain.RegistrationForm
-import com.tongue.dandelioncourier.databinding.FragmentLoginBinding
+import com.tongue.dandelioncourier.data.model.RegistrationForm
 import com.tongue.dandelioncourier.databinding.FragmentRegisterBinding
 import com.tongue.dandelioncourier.ui.states.RegistrationUiState
-import com.tongue.dandelioncourier.ui.viewmodels.LoginViewModel
 import com.tongue.dandelioncourier.ui.viewmodels.RegisterViewModel
 import kotlinx.coroutines.launch
 

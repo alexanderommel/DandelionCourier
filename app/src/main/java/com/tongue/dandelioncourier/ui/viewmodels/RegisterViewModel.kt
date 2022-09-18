@@ -3,8 +3,7 @@ package com.tongue.dandelioncourier.ui.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tongue.dandelioncourier.data.DriverRemoteRepository
-import com.tongue.dandelioncourier.data.domain.RegistrationForm
-import com.tongue.dandelioncourier.ui.states.LoginUiState
+import com.tongue.dandelioncourier.data.model.RegistrationForm
 import com.tongue.dandelioncourier.ui.states.RegistrationUiState
 import com.tongue.dandelioncourier.utils.AppLog
 import kotlinx.coroutines.Job

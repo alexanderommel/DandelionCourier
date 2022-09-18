@@ -3,9 +3,8 @@ package com.tongue.dandelioncourier.ui.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tongue.dandelioncourier.data.DriverRemoteRepository
-import com.tongue.dandelioncourier.data.domain.Driver
+import com.tongue.dandelioncourier.data.model.Driver
 import com.tongue.dandelioncourier.ui.states.LoginUiState
-import com.tongue.dandelioncourier.ui.states.PresentationUiState
 import com.tongue.dandelioncourier.utils.AppLog
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow

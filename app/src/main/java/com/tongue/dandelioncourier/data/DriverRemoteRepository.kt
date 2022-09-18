@@ -1,8 +1,8 @@
 package com.tongue.dandelioncourier.data
 
-import com.tongue.dandelioncourier.data.domain.Driver
-import com.tongue.dandelioncourier.data.domain.DriverAuthentication
-import com.tongue.dandelioncourier.data.domain.RegistrationForm
+import com.tongue.dandelioncourier.data.model.Driver
+import com.tongue.dandelioncourier.data.model.DriverAuthentication
+import com.tongue.dandelioncourier.data.model.RegistrationForm
 import com.tongue.dandelioncourier.data.network.RetrofitInstance
 import com.tongue.dandelioncourier.utils.AppLog
 

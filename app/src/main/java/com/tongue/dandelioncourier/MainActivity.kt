@@ -9,7 +9,7 @@ import android.os.Looper
 import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.*
-import com.tongue.dandelioncourier.data.domain.Position
+import com.tongue.dandelioncourier.data.model.Position
 import com.tongue.dandelioncourier.databinding.ActivityMainBinding
 import com.tongue.dandelioncourier.ui.viewmodels.ActivityViewModel
 import com.tongue.dandelioncourier.utils.AppLog

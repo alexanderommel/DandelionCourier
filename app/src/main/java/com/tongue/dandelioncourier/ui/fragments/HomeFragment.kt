@@ -10,9 +10,8 @@ import androidx.fragment.app.activityViewModels
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.tongue.dandelioncourier.R
-import com.tongue.dandelioncourier.data.domain.ShippingNotification
+import com.tongue.dandelioncourier.data.model.ShippingNotification
 import com.tongue.dandelioncourier.databinding.FragmentHomeBinding
-import com.tongue.dandelioncourier.databinding.FragmentLoginBinding
 import com.tongue.dandelioncourier.ui.viewmodels.ActivityViewModel
 import com.tongue.dandelioncourier.utils.StompInstance
 

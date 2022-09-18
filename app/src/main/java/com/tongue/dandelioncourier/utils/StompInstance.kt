@@ -1,18 +1,13 @@
 package com.tongue.dandelioncourier.utils
 
 import com.google.gson.Gson
-import com.tongue.dandelioncourier.data.domain.Position
-import com.tongue.dandelioncourier.data.domain.ShippingNotification
+import com.tongue.dandelioncourier.data.model.Position
+import com.tongue.dandelioncourier.data.model.ShippingNotification
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import org.hildan.krossbow.stomp.StompClient
 import org.hildan.krossbow.stomp.StompSession
-import org.hildan.krossbow.stomp.conversions.jackson.withJackson
-import org.hildan.krossbow.stomp.frame.FrameBody
 import org.hildan.krossbow.stomp.sendText
 import org.hildan.krossbow.stomp.subscribeText
-import org.hildan.krossbow.websocket.WebSocketClient
-import org.hildan.krossbow.websocket.builtin.builtIn
 import org.hildan.krossbow.websocket.okhttp.OkHttpWebSocketClient
 
 class StompInstance {

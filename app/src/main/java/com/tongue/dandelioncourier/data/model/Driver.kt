@@ -1,4 +1,4 @@
-package com.tongue.dandelioncourier.data.domain
+package com.tongue.dandelioncourier.data.model
 
 data class Driver(
     val id: Long=0,

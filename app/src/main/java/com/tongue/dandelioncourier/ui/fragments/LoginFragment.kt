@@ -14,15 +14,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.tongue.dandelioncourier.R
-import com.tongue.dandelioncourier.data.domain.Authentication
+import com.tongue.dandelioncourier.data.model.Authentication
 import com.tongue.dandelioncourier.databinding.FragmentLoginBinding
 import com.tongue.dandelioncourier.ui.states.LoginUiState
-import com.tongue.dandelioncourier.ui.states.PresentationUiState
 import com.tongue.dandelioncourier.ui.viewmodels.ActivityViewModel
 import com.tongue.dandelioncourier.ui.viewmodels.LoginViewModel
-import com.tongue.dandelioncourier.ui.viewmodels.PresentationViewModel
 import com.tongue.dandelioncourier.utils.ValidationRoutines
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class LoginFragment: Fragment() {
